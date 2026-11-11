@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    cursor: none;
+    overflow: hidden;
+  }
+
+  /* Jet wrapper */
+  .jet {
+    position: fixed;
+    width: 100px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  /* Smoke particles */
+  .smoke {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: rgba(220, 220, 220, 0.6);
+    border-radius: 50%;
+    filter: blur(2px);
+    pointer-events: none;
+    animation: smoke 1.6s ease-out forwards;
+  }
+
+  @keyframes smoke {
+    from {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+
+    to {
+      transform: scale(3.2);
+      opacity: 0;
+    }
+}
